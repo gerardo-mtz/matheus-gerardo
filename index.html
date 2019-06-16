@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> </head>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
   <body>
     <header>
       <h1 id="title">Survey Form</h1>
-      <p id="description"></p>
+      <p id="description">
+        A survey form to know if you want to recommend the microverse's program
+      </p>
     </header>
     <main>
       <form action="" id="survey-form">
@@ -37,22 +41,54 @@
             placeholder="min: 0 and max: 100"
           />
         </div>
-        <div>
-        <label for="dropdown">Which option best describes your current role?</label>
-        <select id="dropdown">
-          <option value="1">Student</option>
-          <option value="2">Full Time Job</option>
-          <option value="3">Full Time Learner</option>
-        </select>
-      </div>
-      <div>
-        <label for="radio">How likely is that you would recommend freeCodeCamp to a friend?</label>
-        <input type="radio" id="Definitely" name="recommend" value="1"><label for="Definitely">Definitely</label>
-        <input type="radio" id="Maybe" name="recommend" value="2"><label for="Maybe">Maybe</label>
-        <input type="radio" id="Not Sure" name="recommend" value="3"><label for="Not Sure">Not Sure</label>
-      </div>
-
-
+        <div class="form-dropdown">
+          <label for="dropdown"
+            >Which option best describes your current role?</label
+          >
+          <select id="dropdown">
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Full Time Learner</option>
+          </select>
+        </div>
+        <div class="form-radio">
+          <label for="radio"
+            >How likely is that you would recommend freeCodeCamp to a
+            friend?</label
+          >
+          <div>
+            <input
+              type="radio"
+              class="radio-item"
+              name="recommend"
+              value="1"
+            /><label for="Definitely">Definitely</label>
+            <input
+              type="radio"
+              class="radio-item"
+              name="recommend"
+              value="2"
+            /><label for="Maybe">Maybe</label>
+            <input
+              type="radio"
+              class="radio-item"
+              name="recommend"
+              value="3"
+            /><label for="Not Sure">Not Sure</label>
+          </div>
+        </div>
+        <div class="form-checkbox">
+          <label for="checkbox">Please, choose your language:</label>
+          <input type="checkbox" name="JS" value="1" />JavaScript
+          <input type="checkbox" name="PHP" value="2" />PHP
+          <input type="checkbox" name="Ruby" value="3" />Ruby
+          <input type="checkbox" name="C#" value="4" />C#
+        </div>
+        <div class="form-textarea">
+          <label for="textarea">Please, add any additional comment:</label>
+          <textarea></textarea>
+        </div>
+        <button type="submit" id="submit">Save</button>
       </form>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
